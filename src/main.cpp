@@ -173,7 +173,7 @@ void captureTextInput(SDL_Window* mainWindow, SDL_Surface* windowSurface, SDL_Ev
                 *x += 10;
                 break;
             case SDLK_M:   
-                textFace = TTF_RenderText_Solid(font, "k", 1, *color);
+                textFace = TTF_RenderText_Solid(font, "m", 1, *color);
                 SDL_BlitSurface(textFace, NULL, windowSurface, &textPos); 
                 SDL_UpdateWindowSurface(mainWindow);
                 *x += 10;
@@ -182,6 +182,10 @@ void captureTextInput(SDL_Window* mainWindow, SDL_Surface* windowSurface, SDL_Ev
                 *x+= 20;
                 break;
             case SDLK_DELETE:
+             SDL_BlitSurface(textFace, NULL, windowSurface, &textPos); 
+                *x-=10;
+       
+
         }
       
 }
